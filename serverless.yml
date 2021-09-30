@@ -1,0 +1,23 @@
+
+service: doctorService
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  memory: 2048
+  stage: dev
+  timeouts: 15
+  lambdaHashingVersion: 20201221
+
+functions:
+  doctor:
+    handler: handler.doctor
+    events:
+       - http: ANY /{proxy+}
+       - http: ANY /
+         
+plugins:
+  - serverless-offline
+         

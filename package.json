@@ -1,0 +1,26 @@
+{
+  "name": "slot_service",
+  "version": "1.0.0",
+  "description": "expres doc service",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "offline": "nodemon --exec \"serverless offline\""
+  },
+  "author": "Eberechi Williams",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.6",
+    "morgan": "^1.10.0",
+    "serverless-http": "^2.7.0",
+    "serverless-offline": "^8.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  }
+}
